@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Header } from './components/Header';
 import { ImpactMetrics } from './components/ImpactMetrics';
 import { ContributionHeatmap } from './components/ContributionHeatmap';
@@ -506,6 +507,7 @@ export default function App() {
       </div>
 
       <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} commands={commands} />
+      <Analytics />
     </div>
   );
 }
